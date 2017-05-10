@@ -18,3 +18,9 @@
   background-color: #f2fa52;
   border: 5px solid #555;
 }
+
+.outside-container {
+  height: 300px;
+  width: 300px;
+  background-color: orange;
+}

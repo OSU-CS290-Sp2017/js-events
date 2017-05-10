@@ -28,10 +28,10 @@ function handleBoxClick (event) {
   console.log("==inside handleBoxBlick, currentTarget:", event.currentTarget);
 }
 
-var boxes = document.getElementsByClassName('box');
-for (var i = 0; i < boxes.length; i++) {
-  boxes[i].addEventListener('click', handleBoxClick);
-}
+// var boxes = document.getElementsByClassName('box');
+// for (var i = 0; i < boxes.length; i++) {
+//   boxes[i].addEventListener('click', handleBoxClick);
+// }
 
 function handleButtonClick (event) {
   console.log("==button clicked, target:", event.target);
@@ -52,6 +52,15 @@ googleLink.addEventListener('click', function (event) {
 function delegatedListener (event) {
   console.log("==delegated event currentTarget:", event.currentTarget);
   console.log("==delegated event target:", event.target);
+
+  var currElem = event.target;
+  while (currElem.getAttribute('id') !== 'box-container') {
+    if (currElem.classList.contains('box')) {
+      currElem.classList.toggle('highlighted');
+      break;
+    }
+    currElem = currElem.parentNode;
+  }
 }
 
 var boxContainer = document.getElementById('box-container');

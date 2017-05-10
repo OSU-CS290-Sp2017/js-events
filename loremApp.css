@@ -1,0 +1,39 @@
+.container {
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  min-height: 100px;
+  display: flex;
+}
+
+.button-container {
+  flex: 0 50px;
+}
+
+.words-container {
+  flex: 1;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.add-word-button {
+  height: 100%;
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+  background-color: #458ce4;
+  color: #fff;
+  font-size: 30px;
+}
+
+.word {
+  display: inline-block;
+  padding: 2px 4px;
+  border: 1px solid #666;
+  border-radius: 3px;
+  margin: 4px;
+  background-color: #666;
+  color: #fff;
+  cursor: pointer;
+}
