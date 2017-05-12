@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Forms app</title>
+    <link rel="stylesheet" href="formsApp.css">
+  </head>
+  <body>
+
+    <form>
+
+      <div class="input-container">
+        <label for="box-content-input">Content</label>
+        <input type="text" id="box-content-input">
+      </div>
+
+      <div class="input-container">
+        <label for="box-top-input">Top</label>
+        <input type="number" id="box-top-input">
+      </div>
+
+      <div class="input-container">
+        <label for="box-left-input">Left</label>
+        <input type="number" id="box-left-input">
+      </div>
+
+      <div class="input-container">
+        <label for="box-background-select">Background</label>
+        <select id="box-background-select">
+          <option value="gray">Gray</option>
+          <option value="red">Red</option>
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+          <option value="yellow">Yellow</option>
+        </select>
+      </div>
+
+      <div class="input-container">
+        <label for="box-border-input">Border?</label>
+        <input type="checkbox" id="box-border-input">
+      </div>
+
+    </form>
+
+    <section class="box-container">
+      <div id="box" class="gray"></div>
+    </section>
+
+  </body>
+  <script src="formsApp.js" charset="utf-8"></script>
+</html>

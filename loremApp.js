@@ -36,7 +36,23 @@ function handleAddWordButtonClick(event) {
   currentWord = (currentWord + 1) % loremWords.length;
 }
 
+function delegatedWordClickListener(event) {
+
+  var clickedNode = event.target;
+
+  if (clickedNode.classList.contains('word')) {
+    clickedNode.parentNode.removeChild(clickedNode);
+  } else if (clickedNode.parentNode.classList.contains('word')) {
+    clickedNode.parentNode.parentNode.removeChild(clickedNode.parentNode);
+  }
+}
+
 var addWordButtons = document.getElementsByClassName('add-word-button');
 for (var i = 0; i < addWordButtons.length; i++) {
   addWordButtons[i].addEventListener('click', handleAddWordButtonClick);
+}
+
+var wordsContainers = document.getElementsByClassName('words-container');
+for (var i = 0; i <  wordsContainers.length; i++) {
+  wordsContainers[i].addEventListener('click', delegatedWordClickListener);
 }
